@@ -1,0 +1,21 @@
+header
+  h1
+    = t 'title'
+    |  
+
+    small
+      = link_to '#tokyoadn',
+        'https://alpha.app.net/search/?query=%23tokyoadn',
+        target: :_blank
+
+footer
+  ul.list-inline
+    li: small
+      = link_to '@remino', 'http://alpha.app.net/remino', target: :_blank
+
+    li: small
+      = link_to 'GitHub', 'https://github.com/remino/tokyoapp.net',
+        target: :_blank
+
+    li: small
+      = link_to 'Middleman', 'http://middlemanapp.com/', target: :_blank

@@ -1,0 +1,6 @@
+---
+en:
+  layout:
+    title_format: '%{page} - %{site}'
+
+  title: 'Tokyo App.net'

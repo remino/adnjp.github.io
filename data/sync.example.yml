@@ -1,0 +1,16 @@
+---
+development: &defaults
+  provider: 'AWS'
+  directory: 'aws-bucket-name'
+  region: 'aws-region-name'
+  key_id: 'aws-key-id'
+  secret_key: 'aws-secret-key'  
+
+build:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+staging:
+  <<: *defaults
