@@ -3,11 +3,11 @@ require 'slim/smart'
 Time.zone = 'Tokyo'
 
 activate :blog do |blog|
-  blog.layout = :blog
-  blog.permalink = 'blog/:year/:month/:day/title.html'
+  blog.permalink = ':title.html'
   blog.sources = 'articles/:year-:month-:day-:title.html'
 end
 
+activate :directory_indexes
 activate :i18n, mount_at_root: :en, path: '/:locale/'
 activate :livereload
 
