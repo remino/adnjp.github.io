@@ -1,5 +1,8 @@
 ---
 en:
+  menu:
+    home: 'Home'
+
   layout:
     title_format: '%{page} - %{site}'
 

@@ -2,10 +2,54 @@ doctype html
 
 html
   head
-    = stylesheet_link_tag :site
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     title = html_title
+    = stylesheet_link_tag :site
 
   body
-    .container
-      = yield
+    header.navbar.navbar-default role="banner"
+      .container
+        .navbar-header
+          button.navbar-toggle[type="button" data-toggle="collapse"
+            data-target=".tadn-navbar-collapse"]
+
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+
+          = link_to t('title'), '/', class: 'navbar-brand'
+
+        nav.collapse.navbar-collapse.tadn-navbar-collapse role="navigation"
+          ul.nav.navbar-nav
+            li = link_to t('menu.home'), '/'
+
+    section
+      .container
+        = yield
+
+    footer
+      .container
+        ul.list-inline
+          li: small
+            = link_to '@tokyoadn', 'http://alpha.app.net/tokyoadn', rel: :me,
+              target: :_blank
+
+          li.muted ·
+
+          li: small
+            = link_to '@remino', 'http://alpha.app.net/remino', target: :_blank
+
+          li.muted ·
+
+          li: small
+            = link_to 'GitHub', 'https://github.com/remino/tokyoapp.net',
+              target: :_blank
+
+          li.muted ·
+
+          li: small
+            = link_to 'Middleman', 'http://middlemanapp.com/', target: :_blank
+
+    = javascript_include_tag 'http://code.jquery.com/jquery-2.0.3.min.js'
+    = javascript_include_tag :site

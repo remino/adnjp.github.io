@@ -1,5 +1,8 @@
 ---
 ja:
+  menu:
+    home: 'ホーム'
+
   layout:
     title_format: '%{page} - %{site}'
 
