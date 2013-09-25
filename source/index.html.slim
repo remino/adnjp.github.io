@@ -6,14 +6,14 @@ div lang="ja"
 
   p
     = link_to t('locale.ja'), '/ja/', class: 'btn btn-default',
-      'data-langsel-locale' => 'en'
+      'data-langsel-locale' => 'ja'
 
 div lang="en"
   h1 = t 'title', locale: :en
 
   p
     = link_to t('locale.en'), '/en/', class: 'btn btn-default',
-      'data-langsel-locale' => 'ja'
+      'data-langsel-locale' => 'en'
 
 - content_for :foot do
   = javascript_include_tag :langsel
