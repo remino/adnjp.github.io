@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'guard-middleman'
 gem 'middleman', '~>3.1.5'
 gem 'middleman-blog'
 gem 'middleman-livereload'

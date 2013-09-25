@@ -22,6 +22,7 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     chunky_png (1.2.8)
+    coderay (1.0.9)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -37,7 +38,17 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.9.0)
+    formatador (0.2.4)
     fssm (0.2.10)
+    guard (1.8.2)
+      formatador (>= 0.2.4)
+      listen (>= 1.0.0)
+      lumberjack (>= 1.0.2)
+      pry (>= 0.9.10)
+      thor (>= 0.14.6)
+    guard-middleman (0.2.1)
+      guard (>= 1.4.0)
+      middleman (>= 3.0.0)
     haml (4.0.3)
       tilt
     hike (1.2.3)
@@ -48,6 +59,8 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
+    lumberjack (1.0.4)
+    method_source (0.8.2)
     middleman (3.1.5)
       coffee-script (~> 2.2.0)
       compass (>= 0.12.2)
@@ -87,6 +100,10 @@ GEM
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
     multi_json (1.8.0)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     rack (1.5.2)
     rack-livereload (0.3.15)
       rack
@@ -99,6 +116,7 @@ GEM
       ffi (>= 0.5.0)
     ruby18_source_location (0.2)
     sass (3.2.10)
+    slop (3.4.6)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -123,6 +141,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass!
   compass
+  guard-middleman
   middleman (~> 3.1.5)
   middleman-blog
   middleman-livereload
