@@ -6,4 +6,8 @@ ja:
   layout:
     title_format: '%{page} - %{site}'
 
+  locale:
+    en: 'English'
+    ja: '日本語'
+
   title: '東京ADN'

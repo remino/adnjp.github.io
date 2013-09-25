@@ -1,55 +1,47 @@
-doctype html
+= wrap_layout :site do
+  header.navbar.navbar-default role="banner"
+    .container
+      .navbar-header
+        button.navbar-toggle[type="button" data-toggle="collapse"
+          data-target=".tadn-navbar-collapse"]
 
-html
-  head
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title = html_title
-    = stylesheet_link_tag :site
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
 
-  body
-    header.navbar.navbar-default role="banner"
-      .container
-        .navbar-header
-          button.navbar-toggle[type="button" data-toggle="collapse"
-            data-target=".tadn-navbar-collapse"]
+        = link_to t('title'), '/', class: 'navbar-brand'
 
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
+      nav.collapse.navbar-collapse.tadn-navbar-collapse role="navigation"
+        ul.nav.navbar-nav
+          li = link_to t('menu.home'), '/'
 
-          = link_to t('title'), '/', class: 'navbar-brand'
+  section
+    .container
+      = yield
 
-        nav.collapse.navbar-collapse.tadn-navbar-collapse role="navigation"
-          ul.nav.navbar-nav
-            li = link_to t('menu.home'), '/'
+  footer
+    .container
+      ul.list-inline
+        li: small
+          = link_to '@tokyoadn', 'http://alpha.app.net/tokyoadn', rel: :me,
+            target: :_blank
 
-    section
-      .container
-        = yield
+        li.muted ·
 
-    footer
-      .container
-        ul.list-inline
-          li: small
-            = link_to '@tokyoadn', 'http://alpha.app.net/tokyoadn', rel: :me,
-              target: :_blank
+        li: small
+          = link_to '@remino', 'http://alpha.app.net/remino', target: :_blank
 
-          li.muted ·
+        li.muted ·
 
-          li: small
-            = link_to '@remino', 'http://alpha.app.net/remino', target: :_blank
+        li: small
+          = link_to 'GitHub', 'https://github.com/tokyoadn/tokyoapp.net',
+            target: :_blank
 
-          li.muted ·
+        li.muted ·
 
-          li: small
-            = link_to 'GitHub', 'https://github.com/tokyoadn/tokyoapp.net',
-              target: :_blank
+        li: small
+          = link_to 'Middleman', 'http://middlemanapp.com/', target: :_blank
 
-          li.muted ·
-
-          li: small
-            = link_to 'Middleman', 'http://middlemanapp.com/', target: :_blank
-
-    = javascript_include_tag 'http://code.jquery.com/jquery-2.0.3.min.js'
-    = javascript_include_tag :site
+  = javascript_include_tag 'http://code.jquery.com/jquery-2.0.3.min.js'
+  = javascript_include_tag :site

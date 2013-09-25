@@ -6,4 +6,8 @@ en:
   layout:
     title_format: '%{page} - %{site}'
 
+  locale:
+    en: 'English'
+    ja: '日本語'
+
   title: 'Tokyo App.net'
