@@ -1,0 +1,12 @@
+---
+footer:
+  onadn:
+    href: 'http://alpha.app.net/tokyoadn'
+    rel: 'me'
+
+  hashtag: 'https://alpha.app.net/search/?query=%23tokyoadn'
+  ongithub: 'https://github.com/tokyoadn/tokyoapp.net'
+  middleman: 'http://middlemanapp.com/'
+  
+header:
+  home: '/'

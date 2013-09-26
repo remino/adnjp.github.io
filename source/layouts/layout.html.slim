@@ -13,8 +13,7 @@
         = link_to t('title'), '/', class: 'navbar-brand'
 
       nav.collapse.navbar-collapse.tadn-navbar-collapse role="navigation"
-        ul.nav.navbar-nav
-          li = link_to t('menu.home'), '/'
+        = menu :header, class: 'nav navbar-nav'
 
   section
     .container
@@ -22,23 +21,4 @@
 
   footer
     .container
-      ul.list-inline
-        li: small
-          = link_to '@tokyoadn', 'http://alpha.app.net/tokyoadn', rel: :me,
-            target: :_blank
-
-        li.muted ·
-
-        li: small
-          = link_to '@remino', 'http://alpha.app.net/remino', target: :_blank
-
-        li.muted ·
-
-        li: small
-          = link_to 'GitHub', 'https://github.com/tokyoadn/tokyoapp.net',
-            target: :_blank
-
-        li.muted ·
-
-        li: small
-          = link_to 'Middleman', 'http://middlemanapp.com/', target: :_blank
+      = menu :footer, class: 'list-inline'
