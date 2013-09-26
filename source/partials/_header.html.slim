@@ -1,0 +1,15 @@
+header.navbar.navbar-default role="banner"
+  .container
+    .navbar-header
+      button.navbar-toggle[type="button" data-toggle="collapse"
+        data-target=".tadn-navbar-collapse"]
+
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+
+      = link_to t('title'), '/', class: 'navbar-brand'
+
+    nav.collapse.navbar-collapse.tadn-navbar-collapse role="navigation"
+      = menu :header, class: 'nav navbar-nav'
