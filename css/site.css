@@ -6143,3 +6143,12 @@ td.visible-print {
   th.hidden-print,
   td.hidden-print {
     display: none !important; } }
+/* line 1, /Users/remi/Sites/tokyoapp.net/source/css/_adnbtn.css.sass */
+.adnbtn {
+  height: 20px;
+  width: 180px; }
+
+/* line 1, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
+.navbar-text {
+  margin-bottom: 12px;
+  margin-top: 15px; }
