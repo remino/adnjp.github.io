@@ -5,6 +5,7 @@ Time.zone = 'Tokyo'
 # Ignore, I18n, and blogs are ordered below for a localised blog
 
 ignore %r{^blog/}
+ignore %r{^index\.[a-z]{2}\.}
 
 activate :i18n, mount_at_root: false, path: '/:locale/'
 
@@ -28,4 +29,5 @@ activate :livereload
 set :css_dir, 'css'
 set :images_dir, 'images'
 set :js_dir, 'js'
+set :markdown_engine, :redcarpet
 set :partials_dir, 'partials'
