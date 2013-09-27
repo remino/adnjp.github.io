@@ -26,6 +26,11 @@ end
 activate :directory_indexes
 activate :livereload
 
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+end
+
 set :css_dir, 'css'
 set :images_dir, 'images'
 set :js_dir, 'js'
