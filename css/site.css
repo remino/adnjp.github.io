@@ -6155,14 +6155,9 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 /* line 4, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
 .brand {
-  font-size: -0.2em;
-  text-transform: uppercase; }
+  font-variant: small-caps; }
 
-/* line 8, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
-.navbar-brand {
-  font-size: 14px; }
-
-/* line 11, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
+/* line 7, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
 .navbar-text {
   margin-bottom: 12px;
   margin-top: 15px; }
