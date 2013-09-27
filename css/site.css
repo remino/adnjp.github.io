@@ -314,7 +314,7 @@ html {
 
 /* line 22, /usr/local/opt/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/bundler/gems/bootstrap-sass-0e88056ac5d5/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #4a484c;
@@ -461,7 +461,7 @@ cite {
 /* line 51, /usr/local/opt/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/bundler/gems/bootstrap-sass-0e88056ac5d5/vendor/assets/stylesheets/bootstrap/_type.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 500;
   line-height: 1.1; }
   /* line 55, /usr/local/opt/rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/bundler/gems/bootstrap-sass-0e88056ac5d5/vendor/assets/stylesheets/bootstrap/_type.scss */
@@ -6150,15 +6150,19 @@ td.visible-print {
   width: 180px; }
 
 /* line 1, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
+h1, h2, h3, h4, h5, h6, .navbar {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* line 4, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
 .brand {
   font-size: -0.2em;
   text-transform: uppercase; }
 
-/* line 5, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
+/* line 8, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
 .navbar-brand {
   font-size: 14px; }
 
-/* line 8, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
+/* line 11, /Users/remi/Sites/tokyoapp.net/source/css/_misc.css.sass */
 .navbar-text {
   margin-bottom: 12px;
   margin-top: 15px; }
