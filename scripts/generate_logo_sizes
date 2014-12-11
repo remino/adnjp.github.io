@@ -7,10 +7,10 @@ generate_logo_sizes() {
   PUBLIC_DIR="source"
   TEMP_DIR="` mktemp -d /tmp/generate_logo_sizes.XXXXXXXXXX `"
 
-  SOURCE_SQUARE_CROPPED="$RASTERS_DIR/tokyoadn-logo-color-transparent-cropped.png"
-  SOURCE_SQUARE_PADDED="$RASTERS_DIR/tokyoadn-logo-color-transparent-padded.png"
-  SOURCE_SQUARE_PADDED_OPAQUE="$RASTERS_DIR/tokyoadn-logo-color-white-padded.png"
-  SOURCE_SQUARE_TRIMMED="$RASTERS_DIR/tokyoadn-logo-color-transparent-trimmed.png"
+  SOURCE_SQUARE_CROPPED="$RASTERS_DIR/tokyoadn-logo-flat-transparent-cropped.png"
+  SOURCE_SQUARE_PADDED="$RASTERS_DIR/tokyoadn-logo-shades-transparent-padded.png"
+  SOURCE_SQUARE_PADDED_OPAQUE="$RASTERS_DIR/tokyoadn-logo-shades-white-padded.png"
+  SOURCE_SQUARE_TRIMMED="$RASTERS_DIR/tokyoadn-logo-flat-transparent-trimmed.png"
 
   BASENAME="reminomaru"
   ICONSET_DIR="$ICONS_DIR/$BASENAME.iconset"
