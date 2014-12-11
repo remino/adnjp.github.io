@@ -32,6 +32,7 @@ configure :build do
 end
 
 set :css_dir, 'css'
+set :file_watcher_ignore, file_watcher_ignore + [/^(assets|scripts)(\/|$)/]
 set :images_dir, 'images'
 set :js_dir, 'js'
 set :markdown_engine, :redcarpet
