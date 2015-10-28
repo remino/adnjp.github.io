@@ -1,0 +1,156 @@
+#!/bin/sh
+
+export_logo() {
+  SOURCE_DIR="assets/logo"
+  ICONS_DIR="$SOURCE_DIR/icons"
+  RASTERS_DIR="$SOURCE_DIR/rasters"
+  PUBLIC_DIR="source"
+  TEMP_DIR="` mktemp -d /tmp/export_logo.XXXXXXXXXX `"
+
+  # Input raster
+  SOURCE_SQUARE_TRIMMED="$RASTERS_DIR/tokyoadn-logo-shades-transparent-trimmed.png"
+
+  # Output raster
+  SOURCE_SQUARE_PADDED="$RASTERS_DIR/tokyoadn-logo-shades-transparent-padded.png"
+  SOURCE_SQUARE_PADDED_OPAQUE="$RASTERS_DIR/tokyoadn-logo-shades-white-padded.png"
+  SOURCE_SQUARE_TRIMMED_OPAQUE="$RASTERS_DIR/tokyoadn-logo-shades-white-trimmed.png"
+
+  BASENAME="adnjp"
+  ICONSET_DIR="$ICONS_DIR/$BASENAME.iconset"
+
+  export_logo_rasters
+  export_logo_derivatives
+  export_logo_iconset
+  export_logo_icns
+  export_logo_msicon
+
+  rm -fr "$TEMP_DIR"
+}
+
+export_logo_derivatives() {
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon-180x180-precomposed.png" 180
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon-152x152-precomposed.png" 152
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon-144x144-precomposed.png" 144
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon-120x120-precomposed.png" 120
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon-114x114-precomposed.png" 114
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon-76x76-precomposed.png" 76
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon-72x72-precomposed.png" 72
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon-60x60-precomposed.png" 60
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon-57x57-precomposed.png" 57
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon-precomposed.png" 57
+  export_logo_image "$SOURCE_SQUARE_PADDED_OPAQUE" \
+    "$PUBLIC_DIR/apple-touch-icon.png" 57
+  export_logo_image "$SOURCE_SQUARE_PADDED" \
+    "$PUBLIC_DIR/favicon-196x196.png" 196
+  export_logo_image "$SOURCE_SQUARE_PADDED" \
+    "$PUBLIC_DIR/favicon-160x160.png" 160
+  export_logo_image "$SOURCE_SQUARE_PADDED" \
+    "$PUBLIC_DIR/favicon-96x96.png" 96
+  export_logo_image "$SOURCE_SQUARE_PADDED" \
+    "$PUBLIC_DIR/favicon-32x32.png" 32
+  export_logo_image "$SOURCE_SQUARE_PADDED" \
+    "$PUBLIC_DIR/favicon.png" 32
+  export_logo_image "$SOURCE_SQUARE_PADDED" \
+    "$PUBLIC_DIR/mstile-70x70.png" 70
+  export_logo_image "$SOURCE_SQUARE_PADDED" \
+    "$PUBLIC_DIR/mstile-144x144.png" 144
+  export_logo_image "$SOURCE_SQUARE_PADDED" \
+    "$PUBLIC_DIR/mstile-150x150.png" 150
+  export_logo_image "$SOURCE_SQUARE_PADDED" \
+    "$PUBLIC_DIR/mstile-310x310.png" 310
+}
+
+export_logo_iconset() {
+  small_sizes="16 32"
+  large_sizes="128 256 512"
+  export_logo_iconset_images "$SOURCE_SQUARE_TRIMMED" $small_sizes
+  export_logo_iconset_images "$SOURCE_SQUARE_PADDED" $large_sizes
+}
+
+export_logo_iconset_images() {
+  input=$1
+  shift
+
+  mkdir -p "$ICONSET_DIR"
+
+  for size1x in $@
+  do
+    size2x="` echo "$size1x * 2" | bc -l `"
+    filename1x="$ICONSET_DIR/icon_${size1x}x${size1x}.png"
+    filename2x="$ICONSET_DIR/icon_${size1x}x${size1x}@2x.png"
+    export_logo_image "$input" "$filename1x" "$size1x"
+    export_logo_image "$input" "$filename2x" "$size2x"
+  done
+}
+
+export_logo_icns() {
+  icns_file="$ICONS_DIR/$BASENAME.icns"
+  iconutil --convert icns --output "$icns_file" "$ICONSET_DIR"
+}
+
+export_logo_image() {
+  input=$1
+  output=$2
+  width=$3
+  height=$4
+  options=$5
+
+  [ -n "$height" ] && height=$width
+
+  echo "$input => $output @ ${width}x${height}"
+  convert "$input" -resize "${width}x${height}" "$output"
+}
+
+export_logo_msicon() {
+  small_sizes="16 32"
+  large_sizes="64 128 256"
+
+  export_logo_msicon_images "$SOURCE_SQUARE_TRIMMED" $small_sizes
+  export_logo_msicon_images "$SOURCE_SQUARE_PADDED" $large_sizes
+
+  convert "$TEMP_DIR/msicon_*" "$PUBLIC_DIR/favicon.ico"
+}
+
+export_logo_msicon_images() {
+  input=$1
+  shift
+
+  for size in $@
+  do
+    filename="$TEMP_DIR/msicon_${size}x.png"
+    export_logo_image "$input" "$filename" "$size"
+  done
+}
+
+export_logo_rasters() {
+  # 3584 = 4096 / 16 * 14
+  convert -background none -size 4096x4096 -gravity center \
+    xc:transparent'[4096x4096]' \
+    \( "$SOURCE_SQUARE_TRIMMED" -resize 3584x -compose over \) \
+    -composite "$SOURCE_SQUARE_PADDED"
+  echo "=> $SOURCE_SQUARE_PADDED"
+
+  convert -background none -size 4096x4096 -gravity center \
+    xc:white'[4096x4096]' \
+    \( "$SOURCE_SQUARE_PADDED" -compose over \) \
+    -composite "$SOURCE_SQUARE_PADDED_OPAQUE"
+  echo "=> $SOURCE_SQUARE_PADDED_OPAQUE"
+
+  convert -background none -size 4096x4096 -gravity center \
+    xc:white'[4096x4096]' \
+    \( "$SOURCE_SQUARE_TRIMMED" -compose over \) \
+    -composite "$SOURCE_SQUARE_TRIMMED_OPAQUE"
+  echo "=> $SOURCE_SQUARE_TRIMMED_OPAQUE"
+}
+
+export_logo $@
