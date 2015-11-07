@@ -1,0 +1,13 @@
+#!/bin/sh
+
+install() {
+  SCRIPT_DIR="` dirname "$0" `"
+  ROOT_DIR="` dirname "$SCRIPT_DIR" `"
+
+  cd "$ROOT_DIR"
+  bundle install
+
+  "$SCRIPT_DIR/font" install
+}
+
+install $@

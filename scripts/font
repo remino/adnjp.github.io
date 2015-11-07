@@ -1,0 +1,41 @@
+#!/bin/sh
+
+font() {
+  [ $# -lt 1 ] && font_usage && return 1
+
+  SCRIPT_DIR="` dirname "$0" `"
+  ROOT_DIR="` dirname "$SCRIPT_DIR" `"
+  FONT_DIR="$ROOT_DIR/assets/font"
+  BUNDLE_GEMFILE="$FONT_DIR/Gemfile"
+  CONFIG="$FONT_DIR/fontcustom.yml"
+  export BUNDLE_GEMFILE
+
+  ACTION="$1"
+  shift
+
+  case "$ACTION" in
+    compile) font_compile $@ ;;
+    install) font_install $@ ;;
+    help|usage) font_usage ;;
+    *) font_usage && return 1 ;;
+  esac
+}
+
+font_compile() {
+  bundle exec fontcustom compile $@ -c "$CONFIG"
+}
+
+font_install() {
+  bundle install
+}
+
+font_usage() {
+  echo "Usage: ` basename "$0" ` action"
+  echo
+  echo "action:"
+  echo "compile    Compile font."
+  echo "install    Install fontcustom."
+  echo
+}
+
+font $@

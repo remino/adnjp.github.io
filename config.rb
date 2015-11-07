@@ -3,10 +3,14 @@ activate :directory_indexes
 activate :i18n, mount_at_root: :ja
 
 configure :build do
-  activate :asset_hash, exts: %w(.css .eot .js .ttf .woff .woff2)
+  activate :asset_hash, exts: %w(.css .js)
   activate :minify_css
   activate :minify_html
   activate :minify_javascript
+
+  before_build do |builder|
+    system "'%s/font' compile" % config.scripts_dir
+  end
 end
 
 configure :development do
@@ -22,4 +26,5 @@ ignore '/js/include/*'
 set :css_dir, 'css'
 set :environment, ENV['MM_ENV'].to_sym if ENV['MM_ENV'].present?
 set :images_dir, 'img'
+set :scripts_dir, "#{File.dirname __FILE__}/scripts"
 set :js_dir, 'js'

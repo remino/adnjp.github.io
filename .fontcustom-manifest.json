@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "93eedf19cb4b2443945434515bb62f7e81c4bb699c71812b8cc48aad963963c1",
-    "current": "93eedf19cb4b2443945434515bb62f7e81c4bb699c71812b8cc48aad963963c1"
+    "previous": "3e02ea3ea01e2b3d00c0b8f3041afe48d53e7158ec9681ce43d8de70a2bfc282",
+    "current": "3e02ea3ea01e2b3d00c0b8f3041afe48d53e7158ec9681ce43d8de70a2bfc282"
   },
   "fonts": [
     "source/fonts/fontcustom.ttf",
@@ -12,36 +12,36 @@
   "glyphs": {
     "adn": {
       "codepoint": 61696,
-      "source": "assets/icons/adn.svg"
+      "source": "assets/font/adn.svg"
     },
     "adnjp": {
       "codepoint": 61701,
-      "source": "assets/icons/adnjp.svg"
+      "source": "assets/font/adnjp.svg"
     },
     "bars": {
       "codepoint": 61697,
-      "source": "assets/icons/bars.svg"
+      "source": "assets/font/bars.svg"
     },
     "github": {
       "codepoint": 61698,
-      "source": "assets/icons/github.svg"
+      "source": "assets/font/github.svg"
     },
     "tag": {
       "codepoint": 61702,
-      "source": "assets/icons/tag.svg"
+      "source": "assets/font/tag.svg"
     },
     "times": {
       "codepoint": 61699,
-      "source": "assets/icons/times.svg"
+      "source": "assets/font/times.svg"
     },
     "twitter": {
       "codepoint": 61700,
-      "source": "assets/icons/twitter.svg"
+      "source": "assets/font/twitter.svg"
     }
   },
   "options": {
     "autowidth": true,
-    "config": "fontcustom.yml",
+    "config": "/Users/remi/Dropbox/Sites/adnjp.github.io/assets/font/fontcustom.yml",
     "css_selector": ".icon-{{glyph}}",
     "debug": false,
     "font_ascent": 448,
@@ -51,15 +51,15 @@
     "font_name": "fontcustom",
     "force": false,
     "input": {
-      "templates": "assets/icons",
-      "vectors": "assets/icons"
+      "templates": "assets/font",
+      "vectors": "assets/font"
     },
     "no_hash": true,
     "output": {
       "_fontcustom.scss": "source/css",
       "css": "source/fonts",
       "fonts": "source/fonts",
-      "preview": "assets/icons"
+      "preview": "assets/font"
     },
     "preprocessor_path": "",
     "quiet": false,
@@ -70,6 +70,6 @@
   },
   "templates": [
     "source/css/_fontcustom.scss",
-    "assets/icons/fontcustom-preview.html"
+    "assets/font/fontcustom-preview.html"
   ]
 }

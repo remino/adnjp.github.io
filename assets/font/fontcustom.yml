@@ -6,13 +6,13 @@ no_hash: true
 preprocessor_path: ''
 
 input:
-  templates: assets/icons
-  vectors: assets/icons
+  templates: assets/font
+  vectors: assets/font
 
 output:
   "_fontcustom.scss": source/css
   fonts: source/fonts
-  preview: assets/icons
+  preview: assets/font
 
 templates:
   - _fontcustom.scss

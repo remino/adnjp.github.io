@@ -27,10 +27,6 @@ GEM
     fastimage (1.6.8)
       addressable (~> 2.3, >= 2.3.5)
     ffi (1.9.10)
-    fontcustom (1.0.0)
-      json
-      listen
-      thor
     formatador (0.2.5)
     guard (2.13.0)
       formatador (>= 0.2.4)
@@ -143,7 +139,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  fontcustom
   guard-middleman
   middleman (>= 4.0.0.rc.1)
   middleman-livereload
