@@ -3,6 +3,7 @@ activate :directory_indexes
 activate :i18n, mount_at_root: :ja
 
 configure :build do
+  activate :asset_hash, exts: %w(.css .eot .js .ttf .woff .woff2)
   activate :minify_css
   activate :minify_html
   activate :minify_javascript
