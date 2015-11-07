@@ -13,19 +13,20 @@ nav#menu.panel.nav
         | ADN
         span.text-primary JP
 
-    ul.nav-menu.nav-right.narrow-hide
+    ul.nav-menu.nav-right
       - unless is_locale? :en
         li = link_to 'English', '/en', lang: :en, langhref: :en
 
       - unless is_locale? :ja
         li = link_to '日本語', '/', lang: :ja, langhref: :ja
 
-    ul.nav-menu.nav-right.narrow-show.nav-open
-      li
-        = link_to '#menu'
-          i.icon-bars
-          '
-          | Menu
+    //
+      ul.nav-menu.nav-right.narrow-show.nav-open
+        li
+          = link_to '#menu'
+            i.icon-bars
+            '
+            | Menu
 
     ul.nav-menu.nav-right.nav-close
       li
