@@ -1,4 +1,4 @@
-# ADNJP
+# \#ADNJP
 
 App.net user group in Japan.
 
