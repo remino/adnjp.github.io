@@ -7,7 +7,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 gem 'fontcustom'
 gem 'guard-middleman'
-gem 'middleman-compass', '>= 4.0.0.rc.1'
 gem 'middleman-livereload'
 gem 'middleman-minify-html'
 gem 'middleman-sprockets', '>= 4.0.0.rc.1'
