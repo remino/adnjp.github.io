@@ -1,0 +1,19 @@
+---
+autowidth: true
+css_selector: .icon-{{glyph}}
+font_name: fontcustom
+no_hash: true
+preprocessor_path: ''
+
+input:
+  templates: assets/icons
+  vectors: assets/icons
+
+output:
+  "_fontcustom.scss": source/css
+  fonts: source/fonts
+  preview: assets/icons
+
+templates:
+  - _fontcustom.scss
+  - preview

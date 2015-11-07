@@ -1,0 +1,75 @@
+{
+  "checksum": {
+    "previous": "93eedf19cb4b2443945434515bb62f7e81c4bb699c71812b8cc48aad963963c1",
+    "current": "93eedf19cb4b2443945434515bb62f7e81c4bb699c71812b8cc48aad963963c1"
+  },
+  "fonts": [
+    "source/fonts/fontcustom.ttf",
+    "source/fonts/fontcustom.svg",
+    "source/fonts/fontcustom.woff",
+    "source/fonts/fontcustom.eot"
+  ],
+  "glyphs": {
+    "adn": {
+      "codepoint": 61696,
+      "source": "assets/icons/adn.svg"
+    },
+    "adnjp": {
+      "codepoint": 61701,
+      "source": "assets/icons/adnjp.svg"
+    },
+    "bars": {
+      "codepoint": 61697,
+      "source": "assets/icons/bars.svg"
+    },
+    "github": {
+      "codepoint": 61698,
+      "source": "assets/icons/github.svg"
+    },
+    "tag": {
+      "codepoint": 61702,
+      "source": "assets/icons/tag.svg"
+    },
+    "times": {
+      "codepoint": 61699,
+      "source": "assets/icons/times.svg"
+    },
+    "twitter": {
+      "codepoint": 61700,
+      "source": "assets/icons/twitter.svg"
+    }
+  },
+  "options": {
+    "autowidth": true,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "fontcustom",
+    "force": false,
+    "input": {
+      "templates": "assets/icons",
+      "vectors": "assets/icons"
+    },
+    "no_hash": true,
+    "output": {
+      "_fontcustom.scss": "source/css",
+      "css": "source/fonts",
+      "fonts": "source/fonts",
+      "preview": "assets/icons"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "templates": [
+      "_fontcustom.scss",
+      "preview"
+    ]
+  },
+  "templates": [
+    "source/css/_fontcustom.scss",
+    "assets/icons/fontcustom-preview.html"
+  ]
+}
