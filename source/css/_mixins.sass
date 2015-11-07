@@ -1,0 +1,18 @@
+=align-items($position)
+  -ms-align-items: $position
+  -webkit-align-items: $position
+  align-items: $position
+
+=display-flex
+  display: -ms-flex
+  display: -webkit-flex
+  display: flex
+
+=justify-content($position)
+  -ms-justify-content: $position
+  -webkit-justify-content: $position
+  justify-content: $position
+
+=screen-narrow
+  @media screen and (max-width: $screen-xs-max)
+    @content

@@ -1,24 +1,3 @@
 ---
 ja:
-  menu:
-    home: 'ホーム'
-
-  layout:
-    title_format: '%{page} - %{site}'
-
-  locale:
-    en: 'English'
-    ja: '日本語'
-
-  menu:
-    footer:
-      hashtag: '#tokyoadn'
-      middleman: 'Middleman'
-      onadn: '@tokyoadn'
-      ongithub: 'GitHub'
-
-    header:
-      home: 'ホーム'
-
-  follow: 'App.netで@tokyoadnをフォロー'
-  title: 'TokyoADN'
+  title: '#ADNJP'

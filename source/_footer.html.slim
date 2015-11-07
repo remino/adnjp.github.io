@@ -1,0 +1,37 @@
+footer#footer.panel.footer.text-center-wide
+  .panel-content
+    ul.list-inline.list-inline-center
+      li
+        = link_to 'https://alpha.adn.net/adnjp',
+          target: '_blank', rel: 'me'
+            i.footer-icon.icon-large.icon-adn
+            span.sr-only App.net
+            '
+            | @adnjp
+
+      li
+        = link_to 'https://twitter.com/adnjapan',
+          target: '_blank', rel: 'me'
+            i.footer-icon.icon-large.icon-twitter
+            span.sr-only Twitter
+            '
+            | @adnjapan
+
+      li
+        = link_to 'https://alpha.adn.net/hashtags/adnjp',
+          target: '_blank', rel: 'me'
+            i.footer-icon.icon-large.icon-tag
+            span.sr-only App.net
+            '
+            | #adnjp
+
+      li
+        = link_to 'https://github.com/adnjp/adnjp.github.io',
+          target: '_blank', rel: 'me'
+            i.footer-icon.icon-large.icon-github
+            span.sr-only GitHub
+            '
+            | adnjp
+
+    .text-small
+      = partial "#{I18n.locale}/footer"

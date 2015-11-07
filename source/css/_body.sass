@@ -1,0 +1,38 @@
+*
+  box-sizing: border-box
+
+a
+  color: $color-primary
+
+  &:visited
+    color: darken($color-primary, 5%)
+
+  &:active, &:focus, &:hover
+    color: lighten($color-primary, 10%)
+
+body
+  background: $color-bg
+  color: $color-text
+  font-family: $font-family-body
+  margin: 0
+
+  padding:
+    bottom: 0
+    left: 0
+    right: 0
+    top: $nav-height
+
+p, ul
+  margin: 0.75em 0
+
+.pull-left
+  float: left
+
+  +screen-narrow
+    float: none
+
+.pull-right
+  float: right
+
+  +screen-narrow
+    float: none

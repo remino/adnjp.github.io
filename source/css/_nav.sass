@@ -1,0 +1,95 @@
+.nav
+  background: $color-bg
+  border-bottom: solid 1px $color-border
+  box-sizing: content-box
+  height: $nav-height
+  left: 0
+  line-height: $nav-logo-size
+  margin: 0
+  padding: 0
+  position: fixed
+  top: 0
+  width: 100%
+
+  &:target
+    border: none
+    height: 100%
+
+    .nav-menu
+      &, > li
+        display: block
+
+      > li > a
+        display: block
+        margin: 0 -0.75em
+
+    .nav-close
+      display: block
+
+    .nav-left, .nav-right
+      float: none
+
+    .nav-open
+      display: none
+
+.nav-brand
+  border: none
+  color: $color-text
+  line-height: inherit
+  margin: 0
+  padding: 0
+
+  font:
+    family: $font-family-headings
+    size: 1em
+
+  a
+    display: block
+    text-decoration: none
+
+    padding:
+      bottom: $nav-vertical-padding
+      top: $nav-vertical-padding
+
+    &, &:active, &:focus, &:hover, &:visited
+      color: inherit
+
+.nav-content
+  padding:
+    bottom: 0
+    top: 0
+
+.nav-left
+  float: left
+
+.nav-logo
+  display: inline
+  max-height: $nav-logo-size
+  max-width: 3rem
+  margin-right: 0.5em
+  vertical-align: middle
+  width: auto
+
+.nav-menu
+  font-size: 0.9em
+
+  &, > li
+    display: inline-block
+    list-style: none
+    margin: 0
+    padding: 0
+
+  > li > a
+    color: $color-text
+    display: inline-block
+    padding: $nav-vertical-padding 0.75rem
+    text-decoration: none
+
+    &:active, &:focus, &:hover
+      background: $color-cover
+
+.nav-right
+  float: right
+
+.nav-close
+  display: none

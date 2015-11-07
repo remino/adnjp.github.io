@@ -1,0 +1,44 @@
+h1, h2
+  font-family: $font-family-headings
+
+h1
+  border-bottom: solid 1px $color-border
+  font-size: 1.8em
+  line-height: 1.66
+  margin: 0.4166em 0 0.8333em
+  padding-bottom: 0.4166em
+
+h2
+  font-size: 1.4em
+  line-height: 2.1429
+
+html
+  font-size: 100%
+  line-height: 1.5
+
+.sr-only
+  color: transparent
+  font: 0/0 serif
+  text-shadow: none
+
+.text-center
+  text-align: center
+
+.text-center-wide
+  text-align: center
+
+  +screen-narrow
+    text-align: initial
+
+.text-muted
+  color: mix($color-cover, $color-text, 50%)
+
+.text-primary
+  color: $color-primary
+
+.text-small
+  font-size: 0.8em
+  line-height: 1.875
+
+.text-uppercase
+  text-transform: uppercase

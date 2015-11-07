@@ -1,0 +1,37 @@
+#top
+
+nav#menu.panel.nav
+  .panel-content.nav-content
+    h1.nav-brand.nav-left
+      = link_to '#'
+        svg.nav-logo width=32 height=32
+          image[width="100%" height="100%" alt="ADNJP Logo"
+            xlink:href=image_path('logo-adnjp.svg')
+            src=image_path('logo-adnjp.png')]
+
+        span.text-muted #
+        | ADN
+        span.text-primary JP
+
+    ul.nav-menu.nav-right.narrow-hide
+      - unless is_locale? :en
+        li = link_to 'English', '/en', lang: :en, langhref: :en
+
+      - unless is_locale? :ja
+        li = link_to '日本語', '/', lang: :ja, langhref: :ja
+
+    ul.nav-menu.nav-right.narrow-show.nav-open
+      li
+        = link_to '#menu'
+          i.icon-bars
+          '
+          | Menu
+
+    ul.nav-menu.nav-right.nav-close
+      li
+        = link_to '#', id: 'close'
+          i.icon-times
+          '
+          | Close
+
+#main

@@ -1,0 +1,17 @@
+.footer
+  border-top: solid 1px $color-border
+  height: auto
+  margin: 0
+  padding: 0
+
+  a
+    text-decoration: none
+
+.footer-icon
+  color: $color-text
+
+  @at-root
+    a
+      &:active, &:focus, &:hover
+        .footer-icon
+          color: lighten($color-text, 10%)

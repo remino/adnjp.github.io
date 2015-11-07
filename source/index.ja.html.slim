@@ -1,6 +1,15 @@
----
-layout: narrow
----
-h1.brand = t 'title'
+header.panel.text-center.cover
+  .panel-content
+    figure = partial :logo
+      
+    figcaption
+      h1
+        span.text-muted #
+        | ADN
+        span.text-primary JP
 
-markdown:
+      h2 日本のAPP.NETのユーザグループ
+
+.panel
+  .panel-content
+    = partial 'ja/intro'

@@ -1,8 +1,16 @@
-= wrap_layout :site do
-  = partial :header
+doctype html
 
-  article
-    .container
-      = yield
+html lang="#{I18n.locale}"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title = html_title
+    = stylesheet_link_tag :all
+    = yield_content :head
 
-  = partial :footer
+  body
+    = partial :nav
+    main = yield
+    = javascript_include_tag :all
+    = partial :footer
+    = yield_content :foot

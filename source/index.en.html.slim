@@ -1,23 +1,15 @@
----
-layout: narrow
----
-h1.brand = t 'title'
+header.panel.text-center.cover
+  .panel-content
+    figure = partial :logo
+      
+    figcaption
+      h1
+        span.text-muted #
+        | ADN
+        span.text-primary JP
 
-markdown:
-  **Tokyo App.net** is a community of users on [App.net][adn] who live in Tokyo and elsewhere in the Kantou area of Japan.
+      h2 App.net User Group of Japan
 
-  Users gather in events planned by the community. Membership or registration is not required. The details of the next event will soon be posted.
-
-  Follow [@tokyoadn][tokyoadn] and [#tokyoadn][adnhash] on App.net to know the latest updates about Tokyo App.net. You may also follow [@tokyoadn][twtokyoadn] and [#tokyoadn][twhash] on Twitter.
-
-  This site is generated using [Middleman][middleman] and its code is shared on [GitHub][github] for anyone to fork and contribute. This community site and its related assets are managed by [@remino][remino] (a.k.a. [@edojin][edojin]).
-
-  [adn]: http://app.net/
-  [adnhash]: https://alpha.app.net/search/?query=tokyoadn
-  [edojin]: http://alpha.app.net/edojin
-  [github]: http://github.com/tokyoadn/tokyoadn.github.io
-  [middleman]: http://middlemanapp.com/
-  [remino]: http://alpha.app.net/remino
-  [tokyoadn]: http://alpha.app.net/tokyoadn
-  [twhash]: https://twitter.com/search?q=tokyoadn
-  [twtokyoadn]: http://twitter.com/tokyoadn
+.panel
+  .panel-content
+    = partial 'en/intro'
