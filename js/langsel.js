@@ -1,1 +1,0 @@
-!function(){var a;a=jQuery,a.langSel=function(){return a.ajax({dataType:"jsonp",url:"http://ajaxhttpheaders.appspot.com",success:function(t){var e,n,r;return n=t["Accept-Language"].substr(0,2),e=a("[data-langsel-locale='"+n+"']"),r=e.attr("data-href")||e.attr("href"),r?self.location.replace(r):void 0}})}}.call(this),function(){jQuery(function(){return $.langSel()})}.call(this);
