@@ -8,12 +8,12 @@ export_logo() {
   TEMP_DIR="` mktemp -d /tmp/export_logo.XXXXXXXXXX `"
 
   # Input raster
-  SOURCE_SQUARE_TRIMMED="$RASTERS_DIR/tokyoadn-logo-shades-transparent-trimmed.png"
+  SOURCE_SQUARE_TRIMMED="$RASTERS_DIR/tokyoadn-logo-colour-transparent-trimmed.png"
 
   # Output raster
-  SOURCE_SQUARE_PADDED="$RASTERS_DIR/tokyoadn-logo-shades-transparent-padded.png"
-  SOURCE_SQUARE_PADDED_OPAQUE="$RASTERS_DIR/tokyoadn-logo-shades-white-padded.png"
-  SOURCE_SQUARE_TRIMMED_OPAQUE="$RASTERS_DIR/tokyoadn-logo-shades-white-trimmed.png"
+  SOURCE_SQUARE_PADDED="$RASTERS_DIR/tokyoadn-logo-colour-transparent-padded.png"
+  SOURCE_SQUARE_PADDED_OPAQUE="$RASTERS_DIR/tokyoadn-logo-colour-white-padded.png"
+  SOURCE_SQUARE_TRIMMED_OPAQUE="$RASTERS_DIR/tokyoadn-logo-colour-white-trimmed.png"
 
   BASENAME="adnjp"
   ICONSET_DIR="$ICONS_DIR/$BASENAME.iconset"
