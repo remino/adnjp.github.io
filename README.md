@@ -39,7 +39,7 @@ To compile the font, instead of running `fontcustom`, run `scripts/font compile`
 
 ## Contributing
 
-If you wish to correct, edit, or add anything, feel free to [open an issue][issues] or fork the repo, update the content on the `source` branch, and submit a pull request.
+If you wish to correct, edit, or add anything, feel free to [open an issue][issues] or fork the repo, update the content on the `source` branch, and submit a pull request. You may build the site with your corrections yourself and send a second pull request on `master` if you wish, but it is not necessary.
 
 [bundler]: http://bundler.io/
 [fontcustom]: http://fontcustom.github.io/fontcustom
