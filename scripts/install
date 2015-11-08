@@ -3,11 +3,28 @@
 install() {
   SCRIPT_DIR="` dirname "$0" `"
   ROOT_DIR="` dirname "$SCRIPT_DIR" `"
+  BUILD_DIR="$ROOT_DIR/build"
 
   cd "$ROOT_DIR"
-  bundle install
+  install_middleman
+  install_fontcustom
+  install_build
+}
 
+install_build() {
+  bundle install
+}
+
+install_fontcustom() {
   "$SCRIPT_DIR/font" install
+}
+
+install_middleman() {
+  [ -d "$BUILD_DIR/.git" ] && return
+  [ ! -d "$BUILD_DIR" ] && mkdir "$BUILD_DIR"
+  cp -a "$ROOT_DIR/.git" "$BUILD_DIR/.git"
+  cd "$BUILD_DIR"
+  git checkout master
 }
 
 install $@
