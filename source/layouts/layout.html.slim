@@ -10,7 +10,13 @@ html lang="#{I18n.locale}"
 
   body
     = partial :nav
-    main = yield
-    / = javascript_include_tag :all
-    = partial :footer
+    = partial :cover if content_for? :cover
+
+    .panel
+      = partial :body
+        = yield
+
+      = partial :footer
+
     = yield_content :foot
+    / = javascript_include_tag :all

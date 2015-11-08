@@ -1,5 +1,6 @@
 .nav
-  +align-items(flex-start)
+  +align-items(center)
+  +flex-flow(row nowrap)
   background: $color-bg
   border-bottom: solid 1px $color-border
   box-sizing: content-box
@@ -14,6 +15,7 @@
   z-index: 100
 
   &:target
+    +align-items(flex-start)
     border: none
     height: 100%
 

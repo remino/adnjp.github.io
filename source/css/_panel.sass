@@ -1,9 +1,10 @@
 .panel
-  +align-items(center)
+  +align-items(stretch)
   +display-flex
+  +flex-flow(column nowrap)
   +justify-content(center)
   margin-top: 0 - $nav-height
-  min-height: 0
+  min-height: 100vh
   padding-top: $nav-height
   width: 100%
 
@@ -13,4 +14,11 @@
 .panel-content
   max-width: 50rem
   padding: 1.5rem
+  width: 100%
+
+.panel-section
+  +align-items(center)
+  +display-flex
+  +flex-grow(1)
+  +justify-content(center)
   width: 100%

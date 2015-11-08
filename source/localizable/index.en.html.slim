@@ -1,7 +1,7 @@
-header.panel.text-center.cover
-  .panel-content
-    figure = partial :logo
-      
+- content_for :cover
+  figure
+    = partial :logo
+
     figcaption
       h1
         span.text-muted #
@@ -10,6 +10,4 @@ header.panel.text-center.cover
 
       h2 App.net User Group of Japan
 
-.panel
-  .panel-content
-    = partial 'en/intro'
+= partial 'en/intro'
