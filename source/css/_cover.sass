@@ -2,9 +2,6 @@
   +align-items(center)
   background: $color-cover
   min-height: 100vh
-  position: fixed
-  top: $nav-height
-  z-index: -1
 
   h1
     border-bottom: 0
@@ -17,10 +14,15 @@
     margin: 0
     padding: 0
 
-  + .panel
-    border-top: solid 1px $color-border
-    margin-top: 100vh
-    padding-top: 0
+  +screen-tall
+    position: fixed
+    top: $nav-height
+    z-index: -1
+
+    + .panel
+      border-top: solid 1px $color-border
+      margin-top: 100vh
+      padding-top: 0
 
 .cover-logo
   display: block
