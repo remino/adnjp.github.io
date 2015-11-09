@@ -33,5 +33,5 @@ ignore '/js/include/*'
 set :css_dir, 'css'
 set :environment, ENV['MM_ENV'].to_sym if ENV['MM_ENV'].present?
 set :images_dir, 'img'
-set :scripts_dir, "#{File.dirname __FILE__}/scripts"
+set :scripts_dir, "./scripts"
 set :js_dir, 'js'

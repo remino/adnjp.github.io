@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "3e02ea3ea01e2b3d00c0b8f3041afe48d53e7158ec9681ce43d8de70a2bfc282",
-    "current": "3e02ea3ea01e2b3d00c0b8f3041afe48d53e7158ec9681ce43d8de70a2bfc282"
+    "previous": "5575d7828f7c2c6216143eb7ecc37d8db8ca7be029ec67234e7839c28b5cf0dc",
+    "current": "5575d7828f7c2c6216143eb7ecc37d8db8ca7be029ec67234e7839c28b5cf0dc"
   },
   "fonts": [
     "source/fonts/fontcustom.ttf",
@@ -41,7 +41,7 @@
   },
   "options": {
     "autowidth": true,
-    "config": "/Users/remi/Dropbox/Sites/adnjp.github.io/assets/font/fontcustom.yml",
+    "config": "./assets/font/fontcustom.yml",
     "css_selector": ".icon-{{glyph}}",
     "debug": false,
     "font_ascent": 448,
