@@ -12,7 +12,7 @@ html lang="#{I18n.locale}"
     = partial :nav
     = partial :cover if content_for? :cover
 
-    .panel
+    main#main.panel.main
       = partial :body
         = yield
 
