@@ -12,7 +12,12 @@ install() {
 }
 
 install_build() {
-  bundle install
+  [ -d "$BUILD_DIR/.git" ] && return
+  [ ! -d "$BUILD_DIR" ] && mkdir "$BUILD_DIR"
+  cp -a "$ROOT_DIR/.git" "$BUILD_DIR/.git"
+  cd "$BUILD_DIR"
+  git checkout master
+  cd -
 }
 
 install_fontcustom() {
@@ -20,11 +25,7 @@ install_fontcustom() {
 }
 
 install_middleman() {
-  [ -d "$BUILD_DIR/.git" ] && return
-  [ ! -d "$BUILD_DIR" ] && mkdir "$BUILD_DIR"
-  cp -a "$ROOT_DIR/.git" "$BUILD_DIR/.git"
-  cd "$BUILD_DIR"
-  git checkout master
+  bundle install
 }
 
 install $@
