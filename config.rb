@@ -1,4 +1,11 @@
 # activate :compass
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.branch = 'master'
+  deploy.strategy = :force_push
+end
+
 activate :directory_indexes
 activate :i18n, mount_at_root: :ja
 
