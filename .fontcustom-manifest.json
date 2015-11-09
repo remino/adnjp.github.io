@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "5575d7828f7c2c6216143eb7ecc37d8db8ca7be029ec67234e7839c28b5cf0dc",
-    "current": "5575d7828f7c2c6216143eb7ecc37d8db8ca7be029ec67234e7839c28b5cf0dc"
+    "previous": "9c1a5f8519fbd155be8dd1172c74a5a547c7078d667ed232fa75447803504b20",
+    "current": "9c1a5f8519fbd155be8dd1172c74a5a547c7078d667ed232fa75447803504b20"
   },
   "fonts": [
     "source/fonts/fontcustom.ttf",
